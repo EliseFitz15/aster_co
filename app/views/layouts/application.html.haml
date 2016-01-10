@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title= "Aster Co."
+    = stylesheet_link_tag 'application', media: 'all'
+    = csrf_meta_tags
+    = render 'favicon'
+
+  %body
+    = render "layouts/navigation"
+    = render "layouts/flashes"
+
+    = yield
+
+    = javascript_include_tag 'application'
