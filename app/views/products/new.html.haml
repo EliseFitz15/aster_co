@@ -1,0 +1,11 @@
+= form_for @product do |content|
+  = content.label :name, "Product Name"
+  = content.text_field :name, placeholder: "Enter product name"
+
+  = content.label :price, "Product Price"
+  = content.text_field :price, placeholder: "Enter product price (without $) here"
+
+  = content.label :description, "Description"
+  = content.text_area :description, placeholder: "Enter product description here"
+
+  = content.button "Save Product"
