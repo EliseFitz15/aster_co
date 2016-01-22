@@ -1,0 +1,10 @@
+%h2 Edit the #{@collection.title} Collection
+
+.collection-form
+  = form_for(@collection) do |f|
+    = f.label :title
+    = f.text_field :title
+
+    = f.label :description
+    = f.text_field :description
+    = f.button "Update Collection Details", type: 'submit', value: "Create Collection"
