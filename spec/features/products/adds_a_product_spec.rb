@@ -1,16 +1,20 @@
 require "rails_helper"
 
 feature "adds a product" do
+  let!(:collection) { create(:collection) }
   scenario "adds valid information" do
     visit new_product_path
 
     fill_in "Product Name", with: "Virgo"
-    fill_in "Description", with: "Virgo prefers a mild floral, like violet and lavender. 16 oz. candle."
     fill_in "Product Price", with: "20.00"
-
+    fill_in "Description", with: "Virgo prefers a mild floral, like violet and lavender. 16 oz. candle."
+    select "Light up the stars", from: "Choose Collection"
     click_on "Save Product"
 
     expect(page).to have_content "Virgo"
+    expect(page).to have_content "Virgo prefers a mild floral, like violet and lavender. 16 oz. candle."
+    expect(page).to have_content "20.00"
+    expect(page).to have_content "Light up the stars"
   end
 
   scenario "adds with invalid information" do
