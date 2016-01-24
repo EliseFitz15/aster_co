@@ -4,3 +4,9 @@
   = @collection.description
 
   = link_to "Edit Collection Details", edit_collection_path(@collection)
+
+%ul#collection-products
+- @products.each do |product|
+  %li
+    = link_to product.name, product_path(product)
+    = product.description
