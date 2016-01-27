@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    @products = Product.where(hidden: false)
   end
 
   def show
@@ -9,9 +9,11 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @collections = Collection.pluck(:title, :id)
   end
 
   def create
+    @collections = Collection.pluck(:title, :id)
     @product = Product.new(product_params)
 
     if @product.save

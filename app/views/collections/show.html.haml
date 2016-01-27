@@ -3,10 +3,11 @@
 .collection-description
   = @collection.description
 
-  = link_to "Edit Collection Details", edit_collection_path(@collection)
+  = link_to "Edit Collection Details", edit_collection_path(@collection), class: :button
 
 %ul#collection-products
 - @products.each do |product|
   %li
     = link_to product.name, product_path(product)
     = product.description
+    = link_to "Edit", edit_product_path(product), class: :button

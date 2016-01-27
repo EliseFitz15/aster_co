@@ -5,4 +5,10 @@
 - if @product.collection.present?
   %p= "Collection: #{@product.collection.title}"
 
-= link_to "Edit Product Details", edit_product_path(@product)
+= link_to "Edit Product Details", edit_product_path(@product), class: :button
+= link_to @product.hidden ? "Show" : "Hide", hide_product_path(@product, page: params[:page]), method: :patch, class: :button
+
+- if @product.hidden == true
+  %p Product hidden from public
+- else
+  %p Product visible to public 

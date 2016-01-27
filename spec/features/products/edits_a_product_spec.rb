@@ -21,4 +21,13 @@ feature "edits a product" do
     expect(page).to_not have_content(product.name)
     expect(page).to_not have_content(product.description)
   end
+
+  scenario "makes product hidden from public temporarily" do
+    visit product_path(product)
+
+    click_on "Hide"
+
+    visit products_path
+    expect(page).not_to have_content product.name
+  end
 end
