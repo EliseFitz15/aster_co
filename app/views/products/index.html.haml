@@ -1,4 +1,8 @@
-%ul
-- @products.each do |product|
-  %li
-    = link_to product.name, product_path(product)
+.columns
+  .product
+    %h1 All Products
+  .row
+    - @products.each do |product|
+      .small-2.large-4.columns
+        .product-tile
+          = link_to product.name, product_path(product)

@@ -1,10 +1,7 @@
 %nav.top-bar(data-topbar role="navigation" data-options="sticky_on: [small, medium, large]")
-  %ul
-    %li
-      %h1
-        = link_to root_path do
-          <strong>A</strong>ster Co.
-    %li.right
-      = link_to "Collections", collections_path
-      = link_to "About"
-      = link_to "Contact"
+  .aster-co-logo
+    = link_to "Aster Co.", root_path
+    .nav-links.right
+      %p= link_to "Collections", collections_path
+      %p= link_to "About"
+      %p= link_to "Contact"

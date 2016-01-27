@@ -1,6 +1,9 @@
-%h1 Collections
+.columns
+  .collection
+    %h1 Collections
 
-%ul#collections-list
-- @collections.each do |collection|
-  %li
-    = link_to collection.title, collection_path(collection)
+  .row
+    - @collections.each do |collection|
+      .small-2.large-4.columns
+        .collection-tile
+          = link_to collection.title, collection_path(collection)
