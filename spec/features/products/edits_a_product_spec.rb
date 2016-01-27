@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature "edits a product" do
-  let(:product) { create :product }
+  let(:product) { create :product, hidden: true }
 
   scenario "edits a product successfully" do
     visit product_path(product)
@@ -25,7 +25,11 @@ feature "edits a product" do
   scenario "makes product hidden from public temporarily" do
     visit product_path(product)
 
+    click_on("Show")
+    expect(page).to have_content("Product visible to public")
+
     click_on "Hide"
+    expect(page).to have_content("Product hidden from public")
 
     visit products_path
     expect(page).not_to have_content product.name

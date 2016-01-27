@@ -9,11 +9,9 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @collections = Collection.pluck(:title, :id)
   end
 
   def create
-    @collections = Collection.pluck(:title, :id)
     @product = Product.new(product_params)
 
     if @product.save

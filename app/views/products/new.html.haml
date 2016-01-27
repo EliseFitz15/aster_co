@@ -9,6 +9,6 @@
   = f.text_area :description, placeholder: "Enter product description here"
 
   = f.label :collection_id, "Choose Collection"
-  = f.select :collection_id, @collections, include_blank: true
+  = f.select :collection_id, Collection.pluck(:title, :id), include_blank: true
 
   = f.button "Save Product"
