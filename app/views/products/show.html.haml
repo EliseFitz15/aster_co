@@ -1,14 +1,17 @@
-%h2= @product.name
-%p= number_to_currency(@product.price)
-.product-description
-  %p= @product.description
-- if @product.collection.present?
-  %p= "Collection: #{@product.collection.title}"
+.columns
+  %h2= @product.name
+  .row
+    = image_tag @product.product_photo
+    %p= number_to_currency(@product.price)
+    .product-description
+      %p= @product.description
+    - if @product.collection.present?
+      %p= "Collection: #{@product.collection.title}"
 
-= link_to "Edit Product Details", edit_product_path(@product), class: :button
-= link_to @product.hidden ? "Show" : "Hide", hide_product_path(@product, page: params[:page]), method: :patch, class: :button
+    = link_to "Edit Product Details", edit_product_path(@product), class: :button
+    = link_to @product.hidden ? "Show" : "Hide", hide_product_path(@product, page: params[:page]), method: :patch, class: :button
 
-- if @product.hidden == true
-  %p Product hidden from public
-- else
-  %p Product visible to public 
+    - if @product.hidden == true
+      %p Product hidden from public
+    - else
+      %p Product visible to public

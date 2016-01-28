@@ -11,6 +11,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'foundation-rails'
 gem 'haml-rails'
+gem 'carrierwave',  github:'carrierwaveuploader/carrierwave'
+gem 'fog'
 
 group :development, :test do
   gem 'dotenv-rails'

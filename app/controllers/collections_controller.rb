@@ -2,7 +2,7 @@ class CollectionsController < ApplicationController
   def index
     @collections = Collection.all
   end
-  
+
   def show
     @collection = Collection.find(params[:id])
     @products = @collection.products
@@ -42,6 +42,6 @@ class CollectionsController < ApplicationController
   protected
 
   def collection_params
-    params.require(:collection).permit(:title, :description)
+    params.require(:collection).permit(:title, :description, :collection_photo)
   end
 end

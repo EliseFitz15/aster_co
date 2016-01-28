@@ -1,7 +1,9 @@
-%h2
+.columns
+  %h2
   = @collection.title
-.collection-description
-  = @collection.description
+  .row.collection-description
+    = @collection.description
+    = image_tag @collection.collection_photo
 
   = link_to "Edit Collection Details", edit_collection_path(@collection), class: :button
 

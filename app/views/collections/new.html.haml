@@ -7,4 +7,8 @@
 
     = f.label :description
     = f.text_field :description
+
+    = f.label :collection_photo, "Add Collection Photo"
+    = f.file_field :collection_photo
+
     = f.button "Create Collection", type: 'submit', value: "Create Collection"

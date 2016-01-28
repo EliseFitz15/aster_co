@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160124034412) do
+ActiveRecord::Schema.define(version: 20160127234653) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "collections", force: :cascade do |t|
-    t.string "title",       null: false
-    t.text   "description", null: false
+    t.string "title",            null: false
+    t.text   "description",      null: false
+    t.string "collection_photo"
   end
 
   create_table "products", force: :cascade do |t|
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160124034412) do
     t.integer "price",                         null: false
     t.integer "collection_id"
     t.boolean "hidden",        default: false, null: false
+    t.string  "product_photo"
   end
 
 end
