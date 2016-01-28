@@ -4,5 +4,6 @@
   .row
     - @products.each do |product|
       .small-2.large-4.columns
-        .product-tile
+        .tiles
           = link_to product.name, product_path(product)
+          = image_tag product.product_photo

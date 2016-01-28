@@ -1,4 +1,13 @@
 @import "foundation_and_overrides";
 @import "header";
-@import "products";
-@import "collections";
+@import "tiles";
+@import "forms";
+@import "displays";
+
+.flash-messages p {
+  margin: 0;
+}
+
+.flash-messages {
+  margin-top: 10px;
+}

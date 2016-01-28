@@ -1,0 +1,26 @@
+.product h1 {
+  text-align: center;
+}
+
+.tiles {
+  background-color: $white;
+  opacity: 0.8;
+  margin-top: 10px;
+  padding: 20px 15px;
+  text-align: center;
+  border: 2px solid $oil;
+}
+
+.tiles a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.tiles img {
+  width: 85%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}

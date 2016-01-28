@@ -1,14 +1,14 @@
-%h2 Edit the #{@collection.title} Collection
+.columns.form-tile
+  %h3 Edit Product Details
+  .row
+    = form_for(@collection) do |f|
+      = f.label :title
+      = f.text_field :title
 
-.collection-form
-  = form_for(@collection) do |f|
-    = f.label :title
-    = f.text_field :title
+      = f.label :description
+      = f.text_field :description
 
-    = f.label :description
-    = f.text_field :description
+      = f.label :collection_photo, "Add Collection Photo"
+      = f.file_field :collection_photo
 
-    = f.label :collection_photo, "Add Collection Photo"
-    = f.file_field :collection_photo
-
-    = f.button "Update Collection Details", type: 'submit', value: "Create Collection"
+      = f.button "Update Collection Details", type: 'submit', value: "Create Collection"

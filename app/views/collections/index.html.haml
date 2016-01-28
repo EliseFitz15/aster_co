@@ -5,5 +5,6 @@
   .row
     - @collections.each do |collection|
       .small-2.large-4.columns
-        .collection-tile
+        .tiles
           = link_to collection.title, collection_path(collection)
+          = image_tag collection.collection_photo

@@ -1,15 +1,21 @@
-.columns
-  %h2
-  = @collection.title
-  .row.collection-description
-    = @collection.description
-    = image_tag @collection.collection_photo
+.columns.small-12
+  .admin-details.clearfix
+    = link_to "Edit Collection Details", edit_collection_path(@collection), class: :button
 
-  = link_to "Edit Collection Details", edit_collection_path(@collection), class: :button
+  .columns
+    .large-4.columns
+      .details-tile
+        %h2= @collection.title
+        %p= @collection.description
+    .large-8.columns
+      .image-tile
+        = image_tag @collection.collection_photo
 
-%ul#collection-products
-- @products.each do |product|
-  %li
-    = link_to product.name, product_path(product)
-    = product.description
-    = link_to "Edit", edit_product_path(product), class: :button
+  .columns.product-list
+    %h3 Products in this Collection
+    - @products.each do |product|
+      .small-2.large-4.columns
+        .tiles
+          = link_to product.name, product_path(product)
+          %p= product.description
+          = link_to "Edit", edit_product_path(product), class: :button
