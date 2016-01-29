@@ -26,10 +26,10 @@ feature "edits a product" do
     visit product_path(product)
 
     click_on("Show")
-    expect(page).to have_content("Product visible to public")
+    expect(page).to have_content("Visibility: Public")
 
     click_on "Hide"
-    expect(page).to have_content("Product hidden from public")
+    expect(page).to have_content("Visibility: Hidden")
 
     visit products_path
     expect(page).not_to have_content product.name
