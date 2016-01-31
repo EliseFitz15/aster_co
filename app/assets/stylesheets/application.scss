@@ -4,10 +4,16 @@
 @import "forms";
 @import "displays";
 
+$gold: #ffd952;
+
 .flash-messages p {
   margin: 0;
 }
 
 .flash-messages {
   margin-top: 10px;
+}
+
+body {
+  margin: -10px;
 }
