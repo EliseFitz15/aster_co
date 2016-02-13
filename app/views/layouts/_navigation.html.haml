@@ -1,9 +1,3 @@
--# %nav.top-bar(data-topbar role="navigation" data-options="sticky_on: [small, medium, large]")
--#   .aster-co-logo
--#     .nav-links.right
--#       %p= link_to "Collections", collections_path
--#       %p= link_to "About"
--#       %p= link_to "Contact"
 .aster-co-logo.clearfix
   %button.js-menu.menu
     %span.bar
@@ -11,8 +5,8 @@
   %nav
     %ul
       %li=  link_to "Collections", collections_path
-      %li=  link_to "Products", all_products_path
-      %li=  link_to "About"
+      %li=  link_to "Contact", contact_info_path
+      %li=  link_to "About", about_path
 
   %h1
     = link_to "Aster Co.", root_path

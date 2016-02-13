@@ -13,7 +13,10 @@ $gold: #ffd952;
 .flash-messages {
   margin-top: 10px;
 }
-
+.alert-box .close {
+  color: $white;
+  opacity: 0.5;
+}
 body {
   margin: -10px;
 }
