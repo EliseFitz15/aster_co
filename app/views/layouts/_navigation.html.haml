@@ -7,6 +7,12 @@
       %li=  link_to "Collections", collections_path
       %li=  link_to "Contact", contact_info_path
       %li=  link_to "About", about_path
+      - if current_user
+        %li= link_to "Log Out as #{current_user.name}", logout_path, method: :delete
+      - else
+        %li= link_to "Login with Twitter", '/auth/twitter'
+        %li= link_to "Login with Facebook", '/auth/facebook'
+        %li= link_to "Login with Google+", '/auth/google'
 
   %h1
     = link_to "Aster Co.", root_path
