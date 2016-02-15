@@ -1,0 +1,9 @@
+%div.login-path
+  - if current_user
+    %p= "Welcome #{current_user.name}"
+    %p= image_tag current_user.image_url
+    %p= link_to "Log Out as #{current_user.name}", logout_path, method: :delete, class: "button"
+  - else
+    %p= link_to "Login with Twitter", '/auth/twitter', class: "button"
+    %p= link_to "Login with Facebook", '/auth/facebook', class: "button"
+    %p= link_to "Login with Google+", '/auth/google', class: "button"
