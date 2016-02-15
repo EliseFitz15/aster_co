@@ -6,6 +6,9 @@ class HomesController < ApplicationController
   def about
   end
 
-  def contact
+  def events
+  end
+
+  def login
   end
 end

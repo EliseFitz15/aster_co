@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 feature "navigation" do
-  scenario "to contact page" do
+  scenario "to events page" do
     visit root_path
-    click_on "Contact"
+    click_on "Events"
 
     expect(page).to have_content ""
   end
@@ -15,10 +15,11 @@ feature "navigation" do
     expect(page).to have_content ""
   end
 
-  scenario "to order page" do
-    visit root_path
-    click_on "Contact"
+  scenario "admin navigates to login page" do
+    visit kitty_candles_login_path
 
-    expect(page).to have_content ""
-  end 
+    expect(page).to have_content "Login with Facebook"
+    expect(page).to have_content "Login with Twitter"
+    expect(page).to have_content "Login with Google+"
+  end
 end

@@ -8,11 +8,15 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'devise'
 gem 'foundation-rails'
 gem 'haml-rails'
 gem 'carrierwave',  github:'carrierwaveuploader/carrierwave'
 gem 'fog'
+
+#OmniAuth
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem "omniauth-google-oauth2"
 
 group :development, :test do
   gem 'dotenv-rails'
