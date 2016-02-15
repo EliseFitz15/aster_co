@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'products#index'
   get '/all_products', to: 'homes#index'
-  get '/contact_info', to: 'homes#contact'
+  get '/events', to: 'homes#events'
   get '/about', to: 'homes#about'
   get '/kitty_candles_login', to: 'homes#login'
 
