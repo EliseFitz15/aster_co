@@ -39,6 +39,12 @@ class CollectionsController < ApplicationController
     end
   end
 
+  def destroy
+    @collection = Collection.find(params[:id])
+    @collection.destroy
+    redirect_to root_path
+  end
+  
   protected
 
   def collection_params

@@ -2,6 +2,7 @@
   .admin-details.clearfix
     = link_to "Edit Product Details", edit_product_path(@product), class: :button
     = link_to @product.hidden ? "Show" : "Hide", hide_product_path(@product, page: params[:page]), method: :patch, class: :button
+    = link_to "Delete", product_path(@product), method: :delete, class: :button
 
     - if @product.hidden == true
       %p Visibility: Hidden

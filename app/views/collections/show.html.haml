@@ -1,6 +1,7 @@
 .columns.small-12
   .admin-details.clearfix
     = link_to "Edit Collection Details", edit_collection_path(@collection), class: :button
+    = link_to "Delete Collection Details", collection_path(@collection), method: :delete, class: :button
 
   .columns
     .large-4.columns

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  resources :products, except: :destroy
-  resources :collections, except: :destroy
+  resources :products
+  resources :collections
   resources :hide_product, only: [:update]
 end
