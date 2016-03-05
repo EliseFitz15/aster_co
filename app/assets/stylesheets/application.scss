@@ -4,7 +4,29 @@
 @import "forms";
 @import "displays";
 
-$gold: #ffd952;
+@font-face {
+  font-family: 'quicksand-regular';
+  src: font-url('Quicksand_Regular.otf') format("opentype");
+  font-family: 'quicksand-dash';
+  src: font-url('Quicksand_Dash.otf') format('opentype');
+  font-family: 'quicksand-bold';
+  src: font-url('Quicksand_Bold.otf') format('opentype');
+  font-family: 'quicksand-bold-italic';
+  src: font-url('Quicksand_BoldItalic.otf') format('opentype');
+  font-family: 'quicksand-italic';
+  src: font-url('Quicksand_Italic.otf') format('opentype');
+  font-family: 'quicksand-light';
+  src: font-url('Quicksand_Light.otf') format('opentype');
+  font-family: 'quicksand-light-italic';
+  src: font-url('Quicksand_LightItalic.otf') format('opentype');
+}
+
+$gold: #a48a55;
+
+body {
+  margin: -10px;
+  font-family: 'quicksand-regular'
+}
 
 .flash-messages p {
   margin: 0;
@@ -13,13 +35,12 @@ $gold: #ffd952;
 .flash-messages {
   margin-top: 10px;
 }
+
 .alert-box .close {
   color: $white;
   opacity: 0.5;
 }
-body {
-  margin: -10px;
-}
+
 
 .login-path {
   text-align: center;
