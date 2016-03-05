@@ -1,0 +1,23 @@
+.columns.form-tile
+  %h3 Add New Event
+  .row
+    = form_for @event do |f|
+      = f.label :title, "Event Title"
+      = f.text_field :title
+
+      = f.label :details, "Event Details"
+      = f.text_field :details, placeholder: "Any details for the event, e.g. time, booth location, building name, etc."
+
+      = f.label :start_date, "Event Date"
+      = f.text_field :start_date
+
+      = f.label :location_name, "Location"
+      = f.text_field :location_name
+
+      = f.label :address, "Address"
+      = f.text_field :address
+
+      = f.label :zip_code, "Zip Code"
+      = f.text_field :zip_code
+
+      = f.button "Add Event"

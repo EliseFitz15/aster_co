@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'products#index'
   get '/all_products', to: 'homes#index'
-  get '/events', to: 'homes#events'
   get '/about', to: 'homes#about'
   get '/kitty_candles_login', to: 'homes#login'
 
@@ -11,4 +10,5 @@ Rails.application.routes.draw do
   resources :products
   resources :collections
   resources :hide_product, only: [:update]
+  resources :events, only: [:index, :new, :create]
 end
