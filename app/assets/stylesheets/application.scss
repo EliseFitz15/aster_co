@@ -1,31 +1,20 @@
+@import "fonts";
 @import "foundation_and_overrides";
 @import "header";
 @import "tiles";
 @import "forms";
 @import "displays";
 
-@font-face {
-  font-family: 'quicksand-regular';
-  src: font-url('Quicksand_Regular.otf') format("opentype");
-  font-family: 'quicksand-dash';
-  src: font-url('Quicksand_Dash.otf') format('opentype');
-  font-family: 'quicksand-bold';
-  src: font-url('Quicksand_Bold.otf') format('opentype');
-  font-family: 'quicksand-bold-italic';
-  src: font-url('Quicksand_BoldItalic.otf') format('opentype');
-  font-family: 'quicksand-italic';
-  src: font-url('Quicksand_Italic.otf') format('opentype');
-  font-family: 'quicksand-light';
-  src: font-url('Quicksand_Light.otf') format('opentype');
-  font-family: 'quicksand-light-italic';
-  src: font-url('Quicksand_LightItalic.otf') format('opentype');
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased !important;
 }
 
 $gold: #a48a55;
 
 body {
   margin: -10px;
-  font-family: 'quicksand-regular'
+  font-family: 'quicksandregular'
 }
 
 .flash-messages p {
