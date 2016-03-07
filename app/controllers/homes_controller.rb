@@ -13,4 +13,7 @@ class HomesController < ApplicationController
 
   def login
   end
+
+  def welcome
+  end
 end
