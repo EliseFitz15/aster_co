@@ -1,0 +1,31 @@
+.footer-wrap {
+  margin: auto;
+  border-top: solid 2px $jet;
+  width: 88%;
+}
+
+.footer-social {
+  padding-top: 15px;
+  width: 50%;
+}
+
+.footer-social img {
+  width: 10%;
+  padding: 0 5px;
+  float: right;
+}
+
+.footer-contact-details {
+  width: 50%;
+  padding-top: 15px;
+}
+
+.footer-contact-details p {
+  margin: auto;
+}
+
+@media #{$small-only} {
+  .footer-social img {
+    width: 20%;
+  }
+}
