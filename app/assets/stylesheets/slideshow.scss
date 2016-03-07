@@ -1,0 +1,13 @@
+.slideshow {
+  padding: 6%;
+}
+
+.slideshow img {
+  border: solid 2px $jet;
+}
+
+@media #{$small-only} {
+  .slideshow img {
+    margin-top: 40px;
+  }
+}
