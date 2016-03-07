@@ -1,12 +1,8 @@
-.aster-co-logo.clearfix
-  %button.js-menu.menu
-    %span.bar
+.aster-logo-wrapper
+  = image_tag("AsterLogo.png")
 
-  %nav
-    %ul
-      %li=  link_to "Collections", collections_path
-      %li=  link_to "Events", events_path
-      %li=  link_to "About", about_path
-
-  %h1
-    = link_to "Aster Candles", root_path
+%div.title-line
+  %ul#page-navigation
+    %li=  link_to "About", about_path
+    %li=  link_to "Collections", collections_path
+    %li=  link_to "Events", events_path

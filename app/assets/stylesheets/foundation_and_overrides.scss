@@ -88,7 +88,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to define default font stacks
 // $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+// $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
@@ -104,7 +104,7 @@ $white       : #FFFFFF;
 $smoke       : #EEEEEE;
 // $gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
-// $base        : #AAAAAA;
+$gold        : #a48a55;
 // $aluminum    : #999999;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
@@ -117,7 +117,7 @@ $jet         : #222222;
 
 // We use these as default colors throughout
 $primary-color: #3f0632;
-$gold: #ffd952;
+$gold: #a48a55;
 
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
@@ -128,7 +128,7 @@ $gold: #ffd952;
 // We use these to control various global styles
 // $body-bg: $white;
 // $body-font-color: $jet;
-$body-font-family: $font-family-serif;
+// $body-font-family: $font-family-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
