@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'quicksandregular';
-    src:font-url('quicksand-regular-webfont.eot');
-    src:font-url('quicksand-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('quicksand-regular-webfont.woff2') format('woff2'),
-         font-url('quicksand-regular-webfont.woff') format('woff'),
-         font-url('quicksand-regular-webfont.ttf') format('truetype'),
-         font-url('quicksand-regular-webfont.svg#quicksandregular') format('svg');
+    src:font-font-url('quicksand-regular-webfont.eot');
+    src:font-font-url('quicksand-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font-font-url('quicksand-regular-webfont.woff2') format('woff2'),
+         font-font-url('quicksand-regular-webfont.woff') format('woff'),
+         font-font-url('quicksand-regular-webfont.ttf') format('truetype'),
+         font-font-url('quicksand-regular-webfont.svg#quicksandregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -21,6 +21,44 @@
          font-url('quicksand-bold-webfont.woff') format('woff'),
          font-url('quicksand-bold-webfont.ttf') format('truetype'),
          font-url('quicksand-bold-webfont.svg#quicksandbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'columbia_titlingbold';
+    src: font-url('typetanic_fonts_-_columbia_titling_bold-webfont.eot');
+    src: font-url('typetanic_fonts_-_columbia_titling_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('typetanic_fonts_-_columbia_titling_bold-webfont.woff2') format('woff2'),
+         font-url('typetanic_fonts_-_columbia_titling_bold-webfont.woff') format('woff'),
+         font-url('typetanic_fonts_-_columbia_titling_bold-webfont.ttf') format('truetype'),
+         font-url('typetanic_fonts_-_columbia_titling_bold-webfont.svg#columbia_titlingbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'columbia_titlingmedium';
+    src: font-url('typetanic_fonts_-_columbia_titling_medium-webfont.eot');
+    src: font-url('typetanic_fonts_-_columbia_titling_medium-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('typetanic_fonts_-_columbia_titling_medium-webfont.woff2') format('woff2'),
+         font-url('typetanic_fonts_-_columbia_titling_medium-webfont.woff') format('woff'),
+         font-url('typetanic_fonts_-_columbia_titling_medium-webfont.ttf') format('truetype'),
+         font-url('typetanic_fonts_-_columbia_titling_medium-webfont.svg#columbia_titlingmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'columbia_titlingstandard';
+    src: font-url('typetanic_fonts_-_columbia_titling_standard-webfont.eot');
+    src: font-url('typetanic_fonts_-_columbia_titling_standard-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('typetanic_fonts_-_columbia_titling_standard-webfont.woff2') format('woff2'),
+         font-url('typetanic_fonts_-_columbia_titling_standard-webfont.woff') format('woff'),
+         font-url('typetanic_fonts_-_columbia_titling_standard-webfont.ttf') format('truetype'),
+         font-url('typetanic_fonts_-_columbia_titling_standard-webfont.svg#columbia_titlingstandard') format('svg');
     font-weight: normal;
     font-style: normal;
 
