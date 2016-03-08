@@ -26,6 +26,14 @@
 
 @media #{$small-only} {
   .footer-social img {
+    float: none;
     width: 20%;
+  }
+  .footer-social {
+    width: 88%;
+  }
+  .footer-contact-details {
+    width: 100%;
+    text-align: center;
   }
 }
