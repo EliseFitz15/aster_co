@@ -7,6 +7,7 @@
 @import "slideshow";
 @import "events";
 @import "footer";
+@import "about";
 
 html {
   text-rendering: optimizeLegibility;
@@ -16,6 +17,12 @@ html {
 body {
   margin: -10px;
   font-family: 'quicksandregular'
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 88%;
 }
 
 .flash-messages p {

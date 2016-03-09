@@ -1,0 +1,39 @@
+.about-top-image {
+  border: 2px solid $jet;
+  margin: 6% 0 0 0;
+  height: 500px;
+}
+
+.story-box {
+  border: 2px solid $gold;
+  padding: 8%;
+}
+
+.about-story {
+}
+
+.about-story h1 {
+  font-family: 'columbia_titlingstandard';
+  border-bottom: 2px solid $jet;
+  padding-bottom: 5px;
+  width: 70%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-story h2 {
+  font-family: 'columbia_titlingstandard';
+  text-align: center;
+}
+
+.about-story p {
+  padding: 2% 0;
+  font-size: 1.25rem;
+}
+
+.about-bottom-image {
+  border: 2px solid $jet;
+  margin: 0 0 6% 0;
+  height: 300px;
+}
