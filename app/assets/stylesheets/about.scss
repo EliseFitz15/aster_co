@@ -7,9 +7,7 @@
 .story-box {
   border: 2px solid $gold;
   padding: 8%;
-}
-
-.about-story {
+  background-color: $gold;
 }
 
 .about-story h1 {
@@ -24,6 +22,10 @@
 
 .about-story h2 {
   font-family: 'columbia_titlingstandard';
+  text-align: center;
+}
+
+.about-story p:last-of-type {
   text-align: center;
 }
 
