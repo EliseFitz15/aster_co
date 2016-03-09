@@ -35,6 +35,14 @@
   margin: auto;
 }
 
+.footer-contact-details p a {
+  color: $jet;
+}
+.footer-contact-details p a:hover {
+  font-weight: bolder;
+  color: $gold;
+}
+
 @media #{$small-only} {
   .footer-line:before {
     margin-top: 0;

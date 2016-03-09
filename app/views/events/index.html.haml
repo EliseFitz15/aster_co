@@ -1,26 +1,3 @@
-= full_grid_row do
-  .events-header
-    %h2 Where to find Aster Candles
-
-.columns.large-3
-  %div
-  - @upcoming_events.each do |event|
-    %ul#upcoming
-      .panel
-        %p= event.title
-        %p= event.details
-        %p= event.start_date
-        %p= event.location_name
-        %p= event.address
-        %p= event.zip_code
-
-  %div
-  - @past_events.each do |event|
-    %ul#past
-      %li.panel
-        %p= event.title
-        %p= event.details
-        %p= event.start_date
-        %p= event.location_name
-        %p= event.address
-        %p= event.zip_code
+.placeholder
+  %h1 COMING SOON
+  %h6 Where to find Aster Candles

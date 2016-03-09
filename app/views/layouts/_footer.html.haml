@@ -1,10 +1,10 @@
 .footer-line
   .footer-contact-details.left
-    %p (555)555-5555
-    %p hello@astercandle.com
+    %p Contact:
+    %p= mail_to "hello@astercandle.com"
 
   .footer-social.right
-    = image_tag("Instagram-01.png")
+    = link_to image_tag("Instagram-01.png"), "https://www.instagram.com/astercandle/"
     = image_tag("pintrest-01.png")
     = image_tag("facebook-01.png")
     = image_tag("Twitter-01.png")
