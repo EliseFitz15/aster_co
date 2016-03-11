@@ -10,22 +10,37 @@
 
 .story-box {
   border: 2px solid $gold;
-  padding: 8%;
+  padding: 12%;
   background-color: $gold;
 }
 
 .about-story h1 {
-  font-family: 'columbia_titlingstandard';
+  font-family: $font-family-serif-standard;
   border-bottom: 2px solid $jet;
   padding-bottom: 5px;
-  width: 70%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 
+.about-story h1:nth-of-type(1) {
+  width: 40%;
+}
+
+.about-story h1:nth-of-type(2) {
+  width: 60%;
+}
+
+.about-story h1:nth-of-type(3) {
+  width: 47%;
+}
+
+.about-story h1:nth-of-type(4) {
+  width: 47%;
+}
+
 .about-story h2 {
-  font-family: 'columbia_titlingstandard';
+  font-family: $font-family-serif-standard;
   text-align: center;
 }
 
@@ -42,4 +57,26 @@
   border: 2px solid $jet;
   margin: 0 0 6% 0;
   height: 300px;
+}
+
+@media #{$small-only} {
+  .about-story h1:nth-of-type(1) {
+    width: 100%;
+    font-size: 30px;
+  }
+  .about-story h1:nth-of-type(2) {
+    width: 100%;
+    font-size: 30px;
+  }
+  .about-story h1:nth-of-type(3) {
+    width: 100%;
+    font-size: 30px;
+  }
+  .about-story h1:nth-of-type(4) {
+    width: 100%;
+    font-size: 30px;
+  }
+  .about-bottom-image {
+    height: 100px;
+  }
 }
