@@ -1,7 +1,11 @@
 .about-top-image {
   border: 2px solid $jet;
   margin: 6% 0 0 0;
-  height: 500px;
+  height: auto;
+}
+
+.about-top-image img {
+  width: 100%;
 }
 
 .story-box {
