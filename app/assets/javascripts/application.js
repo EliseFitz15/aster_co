@@ -13,22 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require slick
 //= require_tree .
 
 $(function(){ $(document).foundation();
-
-  var isActive = false;
-
-  $('.js-menu').on('click', function() {
-  	if (isActive) {
-  		$(this).removeClass('active');
-  		$('body').removeClass('menu-open');
-  	} else {
-  		$(this).addClass('active');
-  		$('body').addClass('menu-open');
-  	}
-
-  	isActive = !isActive;
-  });
-
+  $(document).ready(function({
+    $('.slideshow').slick({
+      autoplay: true,
+      autoplaySpeed: 1000
+    });
+  }));
 });
