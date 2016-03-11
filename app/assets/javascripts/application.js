@@ -17,10 +17,11 @@
 //= require_tree .
 
 $(function(){ $(document).foundation();
-  $(document).ready(function({
-    $('.slideshow').slick({
-      autoplay: true,
-      autoplaySpeed: 1000
-    });
-  }));
+});
+
+$(document).ready(function(){
+  $('.slideshow').slick({
+    autoplay: true,
+    autoplaySpeed: 3000
+  });
 });
