@@ -6,6 +6,10 @@
   text-align: center;
 }
 
-.placeholder h1, h6 {
-  font-family: 'columbia_titlingbold';
+.placeholder h1 {
+  font-family: $font-family-serif-bold;
+}
+
+.placeholder h3 {
+  font-family: $font-family-sans-serif;
 }

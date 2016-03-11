@@ -2,13 +2,9 @@
   padding: 6% 0%;
 }
 
-.slideshow img:first-child {
-  margin-right: 47px;
-}
-
 .slideshow img {
   border: solid 2px $jet;
-  width: 1600px;
+  width: 100%;
 }
 
 @media #{$small-only} {
