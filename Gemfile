@@ -12,7 +12,7 @@ gem 'foundation-rails'
 gem 'haml-rails'
 gem 'carrierwave',  github:'carrierwaveuploader/carrierwave'
 gem 'fog'
-
+gem 'slick_rails'
 #OmniAuth
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
