@@ -10,6 +10,7 @@
 @import "events";
 @import "footer";
 @import "about";
+@import "collections";
 
 html {
   text-rendering: optimizeLegibility;
@@ -39,7 +40,6 @@ body {
   color: $white;
   opacity: 0.5;
 }
-
 
 .login-path {
   text-align: center;

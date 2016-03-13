@@ -24,4 +24,8 @@ $(document).ready(function(){
     autoplay: true,
     autoplaySpeed: 3000
   });
+
+  $('.collection-image').hover(function() {
+    $( this ).find('.collection-description').toggle();
+  });
 });

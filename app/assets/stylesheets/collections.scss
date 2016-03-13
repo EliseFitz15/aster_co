@@ -1,0 +1,114 @@
+.collections-details {
+}
+
+.collection-details {
+  margin: 50px  0;
+  padding: 0;
+}
+
+.collection-image {
+  padding: 0;
+  border: 2px solid black;
+  position: relative;
+}
+
+.collection-description {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.collection-description p {
+  font-size: 24px;
+  margin: 20px;
+}
+
+.collection-tile {
+  padding: 0;
+  background-color: $gold;
+}
+
+.collection-tile:before {
+  content: " ";
+  display: block;
+  width: 88%;
+  height: 88%;
+  position: absolute;
+  left: 6%;
+  top: 6%;
+  border: 1px solid black;
+}
+
+.collection-tile .title {
+  text-align: center;
+  margin: 20% 10%;
+}
+
+.collection-tile .title a {
+  font-family: $font-family-serif-medium;
+  color: black;
+  font-size: 44px;
+}
+
+.collection-tile .button {
+  display: inline-block;
+  padding: 12px 25px;
+  color: $gold;
+  background-color: black;
+  position: absolute;
+  bottom: 25%;
+  left: 182px;
+}
+
+.collection-details:nth-child(1) .collection-tile {
+  background-color: black;
+}
+
+.collection-details:nth-child(1) .collection-tile:before {
+  border: 1px solid $gold;
+}
+
+.collection-details:nth-child(1) .collection-tile .title a {
+  color: $gold;
+}
+
+.collection-details:nth-child(1) .collection-tile .button {
+  color: black;
+  background-color: $gold;
+}
+
+.collection-details:nth-child(3) .collection-tile {
+  background-color: white;
+  border: 2px solid black;
+  border-left: 0px;
+}
+
+.collection-details:nth-child(3) .collection-tile:before {
+  border: 1px solid black;
+}
+
+.collection-details:nth-child(3) .collection-tile .button {
+  color: white;
+}
+
+.collection-details:nth-child(2) .collection-tile {
+    float: left;
+}
+
+.collection-details:nth-child(2) .collection-image {
+    float: right;
+}
+
+@media #{$small-only} {
+  .collection-tile .button {
+    display: none;
+  }
+
+  .collection-tile .title a {
+    font-size: 95%;
+    top: 10%;
+  }
+}
