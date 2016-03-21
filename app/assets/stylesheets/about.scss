@@ -56,7 +56,6 @@
 .about-bottom-image {
   border: 2px solid $jet;
   margin: 0 0 6% 0;
-  height: 300px;
 }
 
 @media #{$small-only} {
@@ -75,8 +74,5 @@
   .about-story h1:nth-of-type(4) {
     width: 100%;
     font-size: 30px;
-  }
-  .about-bottom-image {
-    height: 100px;
   }
 }
