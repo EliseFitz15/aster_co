@@ -8,7 +8,7 @@ feature "deletes collection" do
     visit collection_path(collection)
     expect(page).to have_content(product.name)
     click_on "Delete Collection Details"
-    expect(page).to have_content("All Visible Products")
-    expect(page).to have_content(product.name)
+    expect(page).to_not have_content(collection.title)
+    expect(page).to_not have_content(product.name)
   end
 end
