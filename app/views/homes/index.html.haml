@@ -1,9 +1,0 @@
-= full_grid_row do
-  .title-bar
-    %h1 All Products
-  = full_grid_row do
-    - @products.each do |product|
-      .column.large-4.end
-        .tiles
-          = link_to product.name, product_path(product)
-          = image_tag product.product_photo

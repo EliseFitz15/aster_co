@@ -1,4 +1,6 @@
 class CollectionsController < ApplicationController
+  http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD'], except: [:index]
+
   def index
     @collections = Collection.all
   end
@@ -44,7 +46,7 @@ class CollectionsController < ApplicationController
     @collection.destroy
     redirect_to root_path
   end
-  
+
   protected
 
   def collection_params

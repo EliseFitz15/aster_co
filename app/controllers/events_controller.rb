@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD'], except: [:index]
+
   def index
     @upcoming_events = Event.where("start_date > ?", Date.yesterday)
     @past_events = Event.where("start_date <= ?", Date.yesterday)
