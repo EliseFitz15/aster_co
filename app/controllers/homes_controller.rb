@@ -12,4 +12,10 @@ class HomesController < ApplicationController
 
   def welcome
   end
+
+  def placeholdevents
+  end
+
+  def placeholdcollection
+  end
 end
