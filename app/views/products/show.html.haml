@@ -1,4 +1,4 @@
-.columns.small-12
+.product-wrapper.clearfix
   .admin-details.clearfix
     = link_to "Edit Product Details", edit_product_path(@product), class: :button
     = link_to @product.hidden ? "Show" : "Hide", hide_product_path(@product, page: params[:page]), method: :patch, class: :button
@@ -12,12 +12,9 @@
     - if @product.collection.present?
       = link_to "Collection: #{@product.collection.title}", collection_path(@product.collection)
 
-  .columns
-    .large-4.columns
-      .details-tile
-        %h2= @product.name
-        %p= @product.description
-        %p= number_to_currency(@product.price)
-    .large-8.columns
-      .image-tile
-        = image_tag @product.product_photo
+  .image-tile.columns.small-5
+    = image_tag @product.product_photo
+  .details-tile.columns.small-5
+    %h2= @product.name
+    %h2= number_to_currency(@product.price, precision: 0)
+    %p= @product.description
