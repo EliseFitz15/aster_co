@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root 'homes#welcome'
-  get '/all_products', to: 'homes#index'
   get '/about', to: 'homes#about'
   get '/kitty_candles_login', to: 'homes#login'
 
