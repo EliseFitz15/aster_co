@@ -1,3 +1,12 @@
-.placeholder
-  %h1 COMING SOON
-  %h3 Aster Candle Originals
+.collections-list.row
+  - @collections.each do |collection|
+    .collection-details.clearfix{"data-equalizer" => ""}
+      .collection-image.columns.small-6{"data-equalizer-watch" => ""}
+        = image_tag collection.collection_photo
+        .collection-description
+          %p
+            = collection.description
+      .collection-tile.columns.small-6{"data-equalizer-watch" => ""}
+        .title
+          = link_to collection.title, collection_path(collection)        
+        = link_to "EXPLORE", collection_path(collection), class: :button
