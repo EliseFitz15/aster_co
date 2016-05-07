@@ -1,6 +1,6 @@
-.columns.form-tile
-  %h3 Add New Product
-  .row
+.row
+  .columns.form-tile
+    %h3 Add New Product
     = form_for @product do |f|
       = f.label :name, "Product Name"
       = f.text_field :name, placeholder: "Enter product name"

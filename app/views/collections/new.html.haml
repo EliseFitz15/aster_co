@@ -1,6 +1,6 @@
-.columns.form-tile
-  %h3 Add New Collection
-  .row
+.row
+  .columns.form-tile
+    %h3 Add New Collection
     = form_for(@collection) do |f|
       = f.label :title
       = f.text_field :title
