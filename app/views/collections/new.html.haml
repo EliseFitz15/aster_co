@@ -1,12 +1,12 @@
-.columns.form-tile
-  %h3 Add New Collection
-  .row
+.row
+  .columns.form-tile
+    %h3 Add New Collection
     = form_for(@collection) do |f|
       = f.label :title
-      = f.text_field :title
+      = f.text_field :title, placeholder: "Enter title for the collection."
 
       = f.label :description
-      = f.text_field :description
+      = f.text_field :description, placeholder: "Provide description in approx 350 words."
 
       = f.label :collection_photo, "Add Collection Photo"
       = f.file_field :collection_photo

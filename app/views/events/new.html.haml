@@ -1,6 +1,6 @@
-.columns.form-tile
-  %h3 Add New Event
-  .row
+.row
+  .columns.form-tile
+    %h3 Add New Event
     = form_for @event do |f|
       = f.label :title, "Event Title"
       = f.text_field :title
