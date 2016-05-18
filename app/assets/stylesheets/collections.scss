@@ -47,13 +47,15 @@
   margin: 20% 10%;
 }
 
-.collection-tile .title a {
+.collection-tile .title .button:first-child{
   font-family: $font-family-serif-medium;
   color: black;
-  font-size: 44px;
+  font-size: 40px;
+  width: 100%;
+  position: relative;
 }
 
-.collection-tile .button {
+.collection-tile .title .button:last-child {
   display: inline-block;
   padding: 12px 25px;
   color: $gold;
@@ -63,6 +65,7 @@
   left: 182px;
 }
 
+
 .collection-details:nth-child(1) .collection-tile {
   background-color: black;
 }
@@ -71,11 +74,12 @@
   border: 1px solid $gold;
 }
 
-.collection-details:nth-child(1) .collection-tile .title a {
+.collection-details:nth-child(1) .collection-tile .title .button:first-child {
   color: $gold;
+  background-color: black;
 }
 
-.collection-details:nth-child(1) .collection-tile .button {
+.collection-details:nth-child(1) .collection-tile .title .button:last-child {
   color: black;
   background-color: $gold;
 }
@@ -90,7 +94,11 @@
   border: 1px solid black;
 }
 
-.collection-details:nth-child(3) .collection-tile .button {
+.collection-details:nth-child(3) .collection-tile .title .button:first-child {
+  background-color: white;
+}
+
+.collection-details:nth-child(3) .collection-tile .title .button:last-child {
   color: white;
 }
 
@@ -103,12 +111,13 @@
 }
 
 @media #{$small-only} {
-  .collection-tile .button {
+  .collection-tile .title .button:last-child {
     display: none;
   }
 
-  .collection-tile .title a {
+  .collection-tile .title .button:first-child {
     font-size: 95%;
-    top: 10%;
+    margin-top: 28px;
+    padding: 0;
   }
 }
