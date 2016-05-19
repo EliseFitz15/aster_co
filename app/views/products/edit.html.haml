@@ -1,6 +1,6 @@
-.columns.form-tile
-  %h3 Edit Product Details
-  .row
+.row
+  .columns.form-tile
+    %h3 Edit Product Details
     = form_for @product do |f|
       = f.label :name, "Product Name"
       = f.text_field :name, placeholder: "Enter product name"
@@ -14,7 +14,7 @@
       = f.label :collection_id, "Choose Collection"
       = f.select :collection_id, Collection.all.map { |collection| [collection.title, collection.id] }, include_blank: true
 
-      = f.label :product_photo, "Add Product Photo"
-      = f.file_field :product_photo
+      = f.label :product_photos, "Add Product Photos"
+      = f.file_field :product_photos, multiple: true
 
       = f.button "Update Product Details"
