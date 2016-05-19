@@ -1,8 +1,15 @@
+.product-wrapper {
+  background-color: $gold;
+  border: solid 2px black;
+  margin: 30px 0;
+}
+
 .admin-details {
   border: 2px solid #aaa;
   padding: 10px 20px;
   background-color: #ccc;
   margin: 20px;
+  display: none;
 }
 
 .admin-details .button {
@@ -19,16 +26,21 @@
 }
 
 .details-tile {
-  border: 2px solid #aaa;
-  background-color: #ccc;
-  padding: 10px 20px;
-  margin-left: -10px;
+  margin: 30px 30px;
+  text-align: center;
+}
+
+.details-tile p {
+  text-align: left;
+}
+
+.details-tile h2{
+  font-family: $font-family-serif-medium;
 }
 
 .image-tile img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto
+  margin: 50px;
+  border: solid 1px black;
 }
 
 .product-list h3 {
