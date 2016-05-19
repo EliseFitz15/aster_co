@@ -6,4 +6,4 @@
       .column.large-4.end
         .tiles
           = link_to product.name, product_path(product)
-          = image_tag product.product_photo
+          = image_tag product.product_photos.first

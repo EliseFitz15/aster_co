@@ -6,5 +6,5 @@ class Product < ActiveRecord::Base
   validates :description, presence: true
   validates :price, presence: true, numericality: true
 
-  mount_uploader :product_photo, ProductPhotoUploader
+  mount_uploaders :product_photos, ProductPhotoUploader
 end

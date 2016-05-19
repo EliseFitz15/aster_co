@@ -13,7 +13,7 @@
       = link_to "Collection: #{@product.collection.title}", collection_path(@product.collection)
 
   .image-tile.columns.small-5
-    = image_tag @product.product_photo
+    = image_tag @product.product_photos.first
   .details-tile.columns.small-5
     %h2= @product.name
     %h2= number_to_currency(@product.price, precision: 0)
