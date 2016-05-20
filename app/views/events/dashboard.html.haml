@@ -1,0 +1,7 @@
+.row.dashboard
+  %h1 Click to Edit Details
+
+  %ul
+    - @events.each do |event|
+      %li
+        = link_to event.title, edit_event_path(event)
