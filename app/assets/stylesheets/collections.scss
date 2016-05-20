@@ -19,6 +19,7 @@
   height: 100%;
   width: 100%;
   background-color: rgba(255,255,255,0.7);
+  overflow: scroll;
 }
 
 .collection-description p {
@@ -53,6 +54,7 @@
   font-size: 40px;
   width: 100%;
   position: relative;
+  background-color: $gold;
 }
 
 .collection-tile .title .button:last-child {
@@ -91,7 +93,7 @@
 }
 
 .collection-details:nth-child(3) .collection-tile:before {
-  border: 1px solid black;
+  border: 1px solid $gold;
 }
 
 .collection-details:nth-child(3) .collection-tile .title .button:first-child {
@@ -119,5 +121,13 @@
     font-size: 95%;
     margin-top: 28px;
     padding: 0;
+  }
+
+  .collection-description {
+    overflow: scroll;
+  }
+
+  .collection-description p {
+    font-size: 12px;
   }
 }

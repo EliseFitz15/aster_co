@@ -14,7 +14,7 @@
       = f.label :collection_id, "Choose Collection"
       = f.select :collection_id, Collection.pluck(:title, :id), include_blank: true
 
-      = f.label :product_photo, "Add Product Photo"
-      = f.file_field :product_photo
+      = f.label :product_photos, "Add Product Photos"
+      = f.file_field :product_photos, multiple: true
 
       = f.button "Save Product"
