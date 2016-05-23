@@ -9,21 +9,19 @@
 }
 
 .box:first-child {
-  background-color: black;
   font-size: 45px;
   text-align: center;
   z-index: 0;
 }
 
-.box:first-child:after {
+.box:first-child:before {
   content: " ";
+  background-color: black;
   display: block;
-  width: 88%;
-  height: 88%;
+  width: 100%;
   position: absolute;
-  left: 6%;
-  top: 6%;
-  border: 1px solid $gold;
+  padding-top: 98%;
+  border: 2px solid $gold;
   z-index: -1;
 }
 
@@ -60,13 +58,5 @@
 
   .box:first-child {
     font-size: 20px;
-  }
-
-  .box:first-child a:first-child {
-    padding-top: 20%;
-  }
-
-  .box:first-child a:last-child {
-    padding-bottom: 25%;
   }
 }
