@@ -4,3 +4,12 @@
   = image_tag "lifestyle/lifestyle-tray-03.jpg"
   = image_tag "lifestyle/lifestyle-topview-lit.jpg"
   = image_tag "lifestyle/lifestyle-tin-01.jpg"
+
+%div.photo-panel{"data-equalizer" => ""}
+  %div.box{"data-equalizer-watch" => ""}
+    = link_to "Follow", "https://www.instagram.com/astercandle/"
+    = link_to "us on", "https://www.instagram.com/astercandle/"
+    = link_to "Instagram", "https://www.instagram.com/astercandle/"
+  - @photos.each do |photo|
+    %div.box{"data-equalizer-watch" => ""}
+      = image_tag(photo)
