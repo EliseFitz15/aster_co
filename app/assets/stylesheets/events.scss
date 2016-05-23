@@ -1,15 +1,57 @@
-.placeholder {
+.events-top-image {
+  border: 2px solid $jet;
+  margin: 6% 0 0 0;
+  height: auto;
+}
+
+.events-list li {
+  list-style: none;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.title {
+  font-family: $font-family-serif-standard;
+}
+
+.events-list hr {
+  width: 75%;
+  border: solid 1px black;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.events-list p {
+  margin-bottom: 0;
+}
+
+.events-list .date {
+  font-family: $font-family-sans-bold;
+  font-size: 20px;
+}
+
+.events-list .location-name {
+  font-family: $font-family-sans-bold;
+  text-transform: uppercase;
+  padding-top: 8px;
+}
+
+.events-list .details {
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  padding: 30px;
-  width: 70%;
+}
+
+.dashboard h1 {
+  margin: 20px;
   text-align: center;
 }
 
-.placeholder h1 {
-  font-family: $font-family-serif-bold;
+.dashboard li {
+  line-height: 1.5;
+  font-size: 20px;
 }
 
-.placeholder h3 {
-  font-family: $font-family-sans-serif;
+.dashboard ul {
+  margin-bottom: 30px;
 }

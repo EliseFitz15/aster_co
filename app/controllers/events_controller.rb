@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD'], except: [:index]
+  http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD']
 
   def index
     @upcoming_events = Event.where("start_date > ?", Date.yesterday)
@@ -21,6 +21,24 @@ class EventsController < ApplicationController
     end
   end
 
+  def dashboard
+    @events = Event.all
+  end
+
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    if @event.update_attributes(event_params)
+      flash[:notice] = "Updates to product made successfully."
+      redirect_to events_path
+    else
+      flash[:error] = @event.errors.full_messages.join(". ")
+      render :edit
+    end
+  end
 
   private
 
