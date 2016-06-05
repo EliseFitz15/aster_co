@@ -10,6 +10,7 @@
     = link_to "Follow", "https://www.instagram.com/astercandle/"
     = link_to "us on", "https://www.instagram.com/astercandle/"
     = link_to "Instagram", "https://www.instagram.com/astercandle/"
+- unless @photos.empty?
   - @photos.each do |photo|
     %div.box{"data-equalizer-watch" => ""}
       = image_tag(photo)
