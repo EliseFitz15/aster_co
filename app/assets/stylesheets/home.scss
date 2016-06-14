@@ -1,7 +1,3 @@
-.box img {
-  border: solid black 2px;
-}
-
 .box {
   position: relative;
   width: 23%;
@@ -9,20 +5,11 @@
 }
 
 .box:first-child {
-  font-size: 45px;
+  font-size: 35px;
   text-align: center;
-  z-index: 0;
-}
-
-.box:first-child:before {
-  content: " ";
   background-color: black;
-  display: block;
-  width: 100%;
-  position: absolute;
-  padding-top: 98%;
   border: 2px solid $gold;
-  z-index: -1;
+  border-radius: 2%;
 }
 
 .box:first-child a:first-child {
@@ -41,7 +28,7 @@
   margin-bottom: 5%;
 }
 
-@media #{$small-only} {
+@media #{$medium-only} {
   .photo-panel {
     display: block;
   }
@@ -56,10 +43,31 @@
     margin-right: 5%;
   }
 
-  .box:first-child {
-    font-size: 20px;
+  .slick-slider {
+    margin-bottom: 0;
   }
 }
-.instagram-media {
-  
+
+@media #{$small-only} {
+  .photo-panel {
+    display: block;
+  }
+
+  .box {
+    width: 98%;
+    float: left;
+    display: block;
+  }
+
+  .box:first-child {
+    width: 98%;
+
+     a:last-child {
+      padding-bottom: 15%;
+    }
+  }
+
+  .slick-slider {
+    margin-bottom: 0;
+  }
 }
