@@ -12,6 +12,7 @@
 @import "about";
 @import "collections";
 @import "home";
+@import "_settings";
 
 html {
   text-rendering: optimizeLegibility;
@@ -24,9 +25,8 @@ body {
 }
 
 .wrapper {
-  margin-left: auto;
-  margin-right: auto;
   width: 88%;
+  margin: 6% auto;
 }
 
 .flash-messages p {
@@ -45,4 +45,36 @@ body {
 .login-path {
   text-align: center;
   margin: 5%;
+}
+
+.placeholder {
+  text-align: center;
+}
+
+.placeholder h1 {
+  font-family: $font-family-serif-standard;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+// New Pages
+form input, textarea {
+  display: block;
+  width: 100%;
+  height: 25px;
+}
+
+form label {
+  margin-top: 15px;
+  display: block;
+}
+
+form button {
+  margin-top: 25px;
+  background-color: $gold;
+  border: 0;
+  padding: 10px 25px;
+  font-family: $font-family-sans-serif;
 }

@@ -5,30 +5,30 @@
 }
 
 .box:first-child {
-  font-size: 35px;
   text-align: center;
   background-color: black;
   border: 2px solid $gold;
   border-radius: 2%;
 }
 
-.box:first-child a:first-child {
-  padding-top: 15%;
-}
-
 .box:first-child a {
+  color: $gold;
   display: block;
+  font-size: 40px;
+  position: absolute;
+  text-decoration: none;
+  top: 30%;
   z-index: 200;
 }
 
 .photo-panel {
-  overflow: hidden;
   display: flex;
   justify-content: space-between;
   margin-bottom: 5%;
+  overflow: hidden;
 }
 
-@media #{$medium-only} {
+@include breakpoint(medium only) {
   .photo-panel {
     display: block;
   }
@@ -48,26 +48,21 @@
   }
 }
 
-@media #{$small-only} {
+@include breakpoint(small only) {
   .photo-panel {
     display: block;
   }
 
   .box {
-    width: 98%;
-    float: left;
+    width: 100%;
     display: block;
   }
 
-  .box:first-child {
-    width: 98%;
-
-     a:last-child {
-      padding-bottom: 15%;
-    }
+  .box:first-child a {
+    font-size: 52px;
   }
 
-  .slick-slider {
-    margin-bottom: 0;
+  .wrapper{
+    width: 84%;
   }
 }

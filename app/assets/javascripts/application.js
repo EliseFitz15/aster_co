@@ -29,3 +29,5 @@ $(document).ready(function(){
     $( this ).find('.collection-description').toggle();
   });
 });
+
+$(function(){ $(document).foundation(); });

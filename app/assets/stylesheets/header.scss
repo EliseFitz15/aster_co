@@ -1,45 +1,57 @@
-.aster-logo-wrapper {
-  background-color: black;
-  padding: 20px 0px;
+
+  .aster-logo-wrapper {
+    background-color: black;
+    padding: 20px 0px 10px;
+  }
+
+  .aster-logo-wrapper img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  #page-navigation {
+    text-align: center;
+    padding: 60px 0 0 0;
+    background-color: $white;
+    margin: 0 25%;
+    list-style: none;
+  }
+
+  #page-navigation li {
+    display: inline;
+    padding: 10px 25px;
+  }
+
+  #page-navigation li a {
+    color: $gold;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
+  #page-navigation li a:hover {
+    color: $jet;
+  }
+
+  .title-line {
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 85px;
+    border-bottom: 2px solid $jet;
+  }
+
+@include breakpoint(85em) {
+  #page-navigation li a {
+    font-size: 2.25rem;
+  }
+  #page-navigation li {
+    padding: 0 4.5%;
+  }
 }
 
-.aster-logo-wrapper img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-}
-
-#page-navigation {
-  text-align: center;
-  padding: 60px 0 0 0;
-  background-color: $white;
-  margin: 0 25%;
-}
-
-#page-navigation li {
-  display: inline;
-  padding: 10px 25px;
-}
-
-#page-navigation li a {
-  color: $gold;
-  font-size: 1.75rem;
-}
-
-#page-navigation li a:hover {
-  color: $jet;
-}
-
-.title-line {
-  width: 88%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 85px;
-  border-bottom: 2px solid $jet;
-}
-
-@media #{$small-only} {
+@include breakpoint(medium down) {
   #page-navigation li a {
     font-size: 1.25rem;
   }
@@ -52,7 +64,7 @@
   }
 
   #page-navigation li {
-    padding: 10px 10px;
+    padding: 0 4%;
   }
 
   .title-line {
