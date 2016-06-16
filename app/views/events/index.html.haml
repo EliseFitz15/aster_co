@@ -1,4 +1,4 @@
-.events-top-image
+.events-image
   = image_tag('http://placehold.it/1600x500')
 
 .story-box
@@ -6,7 +6,7 @@
     %ul
       - @upcoming_events.each do |event|
         %li
-          %h1.title
+          %h1.event-title
             = event.title
           %hr
           %p.date
@@ -18,5 +18,5 @@
           %p.address
             = "#{event.address}, #{event.zip_code}"
 
-.about-bottom-image
+.events-image
   = image_tag('http://placehold.it/1600x500')

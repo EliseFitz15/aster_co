@@ -1,7 +1,10 @@
-.events-top-image {
+.events-image {
   border: 2px solid $jet;
-  margin: 6% 0 0 0;
-  height: auto;
+}
+
+.events-image img {
+  height: 100%;
+  width: 100%;
 }
 
 .events-list li {
@@ -10,7 +13,7 @@
   padding-bottom: 5%;
 }
 
-.title {
+.event-title {
   font-family: $font-family-serif-standard;
 }
 
@@ -54,4 +57,22 @@
 
 .dashboard ul {
   margin-bottom: 30px;
+}
+
+@include breakpoint(medium down) {
+  .event-title {
+    font-size: 28px;
+  }
+
+  .events-list ul {
+    padding: 0;
+  }
+
+  .events-list hr {
+    width: 100%;
+  }
+
+  .events-list .details {
+    width: 100%;
+  }
 }

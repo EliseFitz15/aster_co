@@ -1,23 +1,24 @@
-.collections-details {
+.collection-details {
+  position: relative;
+  margin-bottom: 10%;
 }
 
-.collection-details {
-  margin: 50px  0;
-  padding: 0;
+.collection-image img {
+  width: 100%;
 }
 
 .collection-image {
-  padding: 0;
   border: 2px solid black;
-  position: relative;
+  display: inline-block;
+  width: calc(50% - 4px);
 }
 
 .collection-description {
   display: none;
   position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
+  top: 2px;
+  width: calc(50% - 4px);
+  height: calc(50% - 4px);
   background-color: rgba(255,255,255,0.7);
   overflow: scroll;
 }
@@ -28,60 +29,57 @@
 }
 
 .collection-tile {
-  padding: 0;
+  border: 2px solid $gold;
+  display: inline-block;
+  width: 50%;
+  float: right;
   background-color: $gold;
+  width: calc(50% - 4px);
 }
 
-.collection-tile:before {
-  content: " ";
-  display: block;
-  width: 88%;
-  height: 88%;
-  position: absolute;
-  left: 6%;
-  top: 6%;
+.title {
+  position: relative;
+  margin: 5%;
+  height: 90%;
   border: 1px solid black;
 }
 
-.collection-tile .title {
+.collection-tile .title h1 a {
+  display: block;
   text-align: center;
-  margin: 20% 10%;
-}
-
-.collection-tile .title .button:first-child{
-  font-family: $font-family-serif-medium;
-  color: black;
-  font-size: 40px;
-  width: 100%;
-  position: relative;
-  background-color: $gold;
-}
-
-.collection-tile .title .button:last-child {
-  display: inline-block;
-  padding: 12px 25px;
-  color: $gold;
-  background-color: black;
+  text-decoration: none;
   position: absolute;
-  bottom: 25%;
-  left: 182px;
+  top: 30%;
+  color: black;
+  font-size: 110%;
+  width: 100%;
 }
 
+.collection-tile .title .button {
+  text-decoration: none;
+  font-family: $font-family-sans-serif;
+  background: black;
+  color: $gold;
+  padding: 10px 25px;
+  position: absolute;
+  top: 55%;
+  left: calc(50% - 65px);
+}
 
 .collection-details:nth-child(1) .collection-tile {
   background-color: black;
+  border: 2px solid black;
 }
 
-.collection-details:nth-child(1) .collection-tile:before {
+.collection-details:nth-child(1) .title {
   border: 1px solid $gold;
 }
 
-.collection-details:nth-child(1) .collection-tile .title .button:first-child {
+.collection-details:nth-child(1) .collection-tile .title h1 a {
   color: $gold;
-  background-color: black;
 }
 
-.collection-details:nth-child(1) .collection-tile .title .button:last-child {
+.collection-details:nth-child(1) .collection-tile .title .button {
   color: black;
   background-color: $gold;
 }
@@ -92,15 +90,11 @@
   border-left: 0px;
 }
 
-.collection-details:nth-child(3) .collection-tile:before {
+.collection-details:nth-child(3) .title {
   border: 1px solid $gold;
 }
 
-.collection-details:nth-child(3) .collection-tile .title .button:first-child {
-  background-color: white;
-}
-
-.collection-details:nth-child(3) .collection-tile .title .button:last-child {
+.collection-details:nth-child(3) .collection-tile .title .button {
   color: white;
 }
 
@@ -112,15 +106,13 @@
     float: right;
 }
 
-@media #{$small-only} {
-  .collection-tile .title .button:last-child {
+@include breakpoint(small only) {
+  .collection-tile .title .button {
     display: none;
   }
 
-  .collection-tile .title .button:first-child {
-    font-size: 95%;
-    margin-top: 28px;
-    padding: 0;
+  .collection-tile .title h1 a {
+    font-size: 50%;
   }
 
   .collection-description {

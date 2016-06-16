@@ -1,10 +1,9 @@
-.about-top-image {
+.about-image {
   border: 2px solid $jet;
-  margin: 6% 0 0 0;
   height: auto;
 }
 
-.about-top-image img {
+.about-image img {
   width: 100%;
 }
 
@@ -58,7 +57,7 @@
   margin: 0 0 6% 0;
 }
 
-@media #{$small-only} {
+@include breakpoint(small only) {
   .about-story h1:nth-of-type(1) {
     width: 100%;
     font-size: 30px;
@@ -74,5 +73,11 @@
   .about-story h1:nth-of-type(4) {
     width: 100%;
     font-size: 30px;
+  }
+  .about-story p {
+    text-align: center;
+  }
+  .about-bottom-image img {
+    width: 100%;
   }
 }
