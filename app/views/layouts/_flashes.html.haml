@@ -1,6 +1,6 @@
 .columns
   .flash-messages
     - flash.each do |type, message|
-      .alert-box(class=type data-alert)
+      .alert-box.clearfix(class=type data-alert)
         %p.message= message
         %a.close(href="#") &times;

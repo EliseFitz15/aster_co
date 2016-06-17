@@ -29,17 +29,31 @@ body {
   margin: 6% auto;
 }
 
-.flash-messages p {
-  margin: 0;
+.flash-messages {
+  margin-top: 20px;
 }
 
-.flash-messages {
-  margin-top: 10px;
+.flash-messages .alert-box {
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $gold;
+}
+
+.flash-messages p {
+  margin: 0;
+  display: inline-block;
+  float: left;
+  padding: 10px;
 }
 
 .alert-box .close {
-  color: $white;
+  color: black;
   opacity: 0.5;
+  display: inline-block;
+  float: right;
+  padding: 10px;
+  text-decoration: none;
 }
 
 .login-path {
