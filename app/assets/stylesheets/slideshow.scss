@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-@media #{$small-only} {
+@include breakpoint(small only) {
   .slideshow img {
     margin-top: 15px;
   }
