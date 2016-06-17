@@ -13,8 +13,14 @@
   padding-bottom: 5%;
 }
 
-.event-title {
+.event-title a {
   font-family: $font-family-serif-standard;
+  text-decoration: none;
+  color: black;
+}
+
+.event-title a:hover {
+  color: #333;
 }
 
 .events-list hr {
