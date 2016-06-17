@@ -1,0 +1,23 @@
+= form_for @event do |f|
+  = f.label :title, "Event Title"
+  = f.text_field :title
+
+  = f.label :start_date, "Event Date"
+  = f.text_field :start_date
+
+  = f.label :event_times, "Event Times"
+  = f.text_field :event_times
+
+  = f.label :details, "Event Details"
+  = f.text_area :details, placeholder: "Any details for the event, e.g. time, booth location, building name, etc."
+
+  = f.label :location_name, "Location Name"
+  = f.text_field :location_name
+
+  = f.label :address, "Address"
+  = f.text_field :address
+
+  = f.label :event_link, "Event Link"
+  = f.text_field :event_link
+
+  = f.button "Save"
