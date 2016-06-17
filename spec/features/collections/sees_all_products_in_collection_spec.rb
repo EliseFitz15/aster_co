@@ -21,9 +21,7 @@ feature 'sees collections list and products listed on collection page' do
     expect(page).to have_content(product_2.name)
     expect(page).not_to have_content(product_3.name)
 
-    click_on "Collections"
-
-    click_on collection_2.title
+    visit collection_path(collection_2)
 
     expect(page).to have_content product_3.name
   end

@@ -8,7 +8,7 @@ feature "adds a collection" do
     fill_in "Description", with: "A collection of scents for each of the astrological signs"
     attach_file "Add Collection Photo", "#{Rails.root}/spec/support/images/photo.png"
 
-    click_on "Create Collection"
+    click_on "Save"
 
     expect(page).to have_content("Light up the Stars")
     expect(page).to have_content("A collection of scents for each of the astrological signs")
@@ -17,7 +17,7 @@ feature "adds a collection" do
   scenario "adds with invalid information for collection" do
     visit new_collection_path
 
-    click_on "Create Collection"
+    click_on "Save"
     expect(page).to have_content "Title can't be blank. Description can't be blank"
   end
 

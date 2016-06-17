@@ -1,0 +1,11 @@
+= form_for(@collection) do |f|
+  = f.label :title
+  = f.text_field :title
+
+  = f.label :description
+  = f.text_field :description
+
+  = f.label :collection_photo, "Add Collection Photo"
+  = f.file_field :collection_photo
+
+  = f.button "Save", type: 'submit'

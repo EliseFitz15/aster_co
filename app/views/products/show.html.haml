@@ -12,9 +12,9 @@
     - if @product.collection.present?
       = link_to "Collection: #{@product.collection.title}", collection_path(@product.collection)
 
-  .image-tile.columns.small-5
+  .image-tile
     = image_tag @product.product_photos.first
-  .details-tile.columns.small-5
+  .details-tile
     %h2= @product.name
     %h2= number_to_currency(@product.price, precision: 0)
     %p= @product.description

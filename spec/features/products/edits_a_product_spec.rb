@@ -14,7 +14,7 @@ feature "edits a product" do
     fill_in "Name", with: "Aries"
     fill_in "Description", with: "Clean laundry smell"
 
-    click_on "Update Product Details"
+    click_on "Save"
 
     expect(page).to have_content("Aries")
     expect(page).to have_content("Clean laundry smell")

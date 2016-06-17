@@ -26,8 +26,11 @@
 }
 
 .details-tile {
-  margin: 30px 30px;
+  margin: 2%;
   text-align: center;
+  float: right;
+  width: 45%;
+  font-size: 130%;
 }
 
 .details-tile p {
@@ -38,9 +41,15 @@
   font-family: $font-family-serif-medium;
 }
 
+.image-tile {
+  width: 45%;
+  float: left;
+}
+
 .image-tile img {
-  margin: 50px;
+  margin: 8%;
   border: solid 1px black;
+  width: 100%;
 }
 
 .product-list h3 {
@@ -51,4 +60,30 @@
   margin-top: 75px;
   padding: 40px;
   background-color: #ccc;
+}
+
+@include breakpoint(medium down) {
+  .product-content {
+    position: relative;
+  }
+
+  .image-tile, .details-tile {
+    float: none;
+    width: 100%;
+  }
+
+  .image-tile img {
+    width: calc(84% - 2px)
+  }
+
+  .details-tile {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 100%;
+  }
+
+  .details-tile p {
+    text-align: center;
+  }
 }

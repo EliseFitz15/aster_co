@@ -10,11 +10,11 @@ feature "adds a product" do
     fill_in "Description", with: "Virgo prefers a mild floral, like violet and lavender. 16 oz. candle."
     select "Light up the stars", from: "Choose Collection"
     attach_file "Add Product Photo", "#{Rails.root}/spec/support/images/photo.png"
-    click_on "Save Product"
+    click_on "Save"
 
     expect(page).to have_content "Virgo"
     expect(page).to have_content "Virgo prefers a mild floral, like violet and lavender. 16 oz. candle."
-    expect(page).to have_content "20.00"
+    expect(page).to have_content "$20"
     expect(page).to have_content "Light up the stars"
     expect(page).to have_css("img[src*='photo.png']")
   end
@@ -22,7 +22,7 @@ feature "adds a product" do
   scenario "adds with invalid information" do
     visit new_product_path
 
-    click_on "Save Product"
+    click_on "Save"
 
     expect(page).to have_content "Name can't be blank. Description can't be blank. Price can't be blank"
   end
