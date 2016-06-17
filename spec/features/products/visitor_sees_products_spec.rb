@@ -16,14 +16,7 @@ feature "visitor sees products" do
     click_link visible_candle.name
     expect(page).to have_content visible_candle.name
     expect(page).to have_content visible_candle.description
-    expect(page).to have_content "$20.00"
-  end
-
-  scenario "admin sees all products" do
-    visit all_products_path
-
-    expect(page).to have_content(visible_candle.name)
-    expect(page).to have_content(hidden_candle.name)
+    expect(page).to have_content "$20"
   end
 
   scenario "visitors don't see none visible products" do

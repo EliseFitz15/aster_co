@@ -14,7 +14,7 @@ feature "edits a collection" do
     fill_in "Title", with: "Earth. Wind. Fire"
     fill_in "Description", with: "Only the simple smells of the natural elements"
 
-    click_on "Update Collection Details"
+    click_on "Save"
 
     expect(page).to have_content("Earth. Wind. Fire")
     expect(page).to have_content("Only the simple smells of the natural elements")

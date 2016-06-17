@@ -45,19 +45,19 @@
 }
 
 .collection-tile .title h1 a {
+  color: black;
   display: block;
+  font-family: $font-family-serif-standard;
+  font-size: 112%;
+  position: absolute;
   text-align: center;
   text-decoration: none;
-  position: absolute;
   top: 30%;
-  color: black;
-  font-size: 110%;
   width: 100%;
 }
 
 .collection-tile .title .button {
   text-decoration: none;
-  font-family: $font-family-sans-serif;
   background: black;
   color: $gold;
   padding: 10px 25px;
@@ -104,6 +104,22 @@
 
 .collection-details:nth-child(2) .collection-image {
     float: right;
+}
+
+@include breakpoint(medium only) {
+  .collection-tile .title h1 a {
+    font-size: 95%;
+  }
+
+  .collection-tile .title .button {
+    left: calc(50% - 52px);
+    padding: 5px 15px;
+    top: 60%;
+  }
+
+  .collection-description {
+    overflow: scroll;
+  }
 }
 
 @include breakpoint(small only) {
