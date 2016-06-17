@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD']
 
   def index
-    @events = Event.where("start_date > ?", Date.yesterday)
+    @events = Event.where("start_date > ?", Date.yesterday).order(:start_date)
   end
 
   def new
