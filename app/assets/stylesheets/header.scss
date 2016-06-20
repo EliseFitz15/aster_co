@@ -53,7 +53,7 @@
 
 @include breakpoint(medium down) {
   #page-navigation li a {
-    font-size: 1.25rem;
+    font-size: 90%;
   }
 
   #page-navigation {
@@ -68,6 +68,6 @@
   }
 
   .title-line {
-    height: 70px;
+    height: 60px;
   }
 }
