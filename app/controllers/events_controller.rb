@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD']
+  http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD'], except: :index
 
   def index
     @events = Event.where("start_date > ?", Date.yesterday).order(:start_date)
