@@ -12,8 +12,11 @@
     - if @product.collection.present?
       = link_to "Collection: #{@product.collection.title}", collection_path(@product.collection)
 
-  .image-tile
-    = image_tag @product.product_photos.first
+  %div.product-slides
+    %div.slideshowp
+      - @product.product_photos.each do |photo|
+        = image_tag photo
+
   .details-tile
     %h2= @product.name
     %h2= number_to_currency(@product.price, precision: 0)

@@ -62,6 +62,14 @@
   background-color: #ccc;
 }
 
+.product-slide {
+  position: relative;
+}
+.slideshowp {
+  position: absolute;
+  width: 25%;
+  left: 10%;
+}
 @include breakpoint(medium down) {
   .product-content {
     position: relative;
