@@ -4,22 +4,8 @@
       = link_to "Edit Collection Details", edit_collection_path(@collection), class: :button
       = link_to "Delete Collection Details", collection_path(@collection), method: :delete, class: :button
 
-    .columns
-      .large-4.columns
-        .details-tile
-          %h2= @collection.title
-          %p= @collection.description
-      .large-8.columns
-        .image-tile
-          = image_tag @collection.collection_photo
-
-    .columns.product-list
-      %h3 Products in this Collection
-    = full_grid_row do
-      - @products.each do |product|
-        .column.large-4.end
-          .tiles
-            = link_to product.name, product_path(product)
-            = image_tag product.product_photos.first
-            %p= product.description
-            = link_to "Edit", edit_product_path(product), class: :button
+.row.product-grid-list
+  - @products.each do |product|
+    = product.name
+    = product.price
+    = image_tag(product.product_photos.first)
