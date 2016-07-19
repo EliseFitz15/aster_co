@@ -69,6 +69,7 @@
   margin-left: -30px;
   width: 35%;
   left: 10%;
+  border: 1px solid black;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -76,11 +77,11 @@
 }
 
 .slick-prev:before {
-  content: "\25C0";
+  display: none;
 }
 
 .slick-next:before {
-  content: "\25B6";
+  display: none;
 }
 
 @include breakpoint(medium down) {
