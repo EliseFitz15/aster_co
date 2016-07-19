@@ -67,8 +67,8 @@
   float: left;
   margin-top: 30px;
   margin-left: -30px;
-  width: 35%;
-  left: 10%;
+  width: 40%;
+  margin-left: 7%;
   border: 1px solid black;
 }
 
@@ -94,14 +94,14 @@
     width: 100%;
   }
 
-  .image-tile img {
-    width: calc(84% - 2px)
+  .slideshowp {
+    width: 85%;
   }
 
   .details-tile {
     width: 85%;
-    margin-right: auto;
-    margin-left: auto;
+    display: inline-block;
+    margin-left: 7%;
     font-size: 100%;
   }
 
