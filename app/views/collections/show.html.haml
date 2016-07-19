@@ -3,9 +3,15 @@
     .admin-details.clearfix
       = link_to "Edit Collection Details", edit_collection_path(@collection), class: :button
       = link_to "Delete Collection Details", collection_path(@collection), method: :delete, class: :button
+.row.collection-title
+  %h1= @collection.title
 
 .row.product-grid-list
   - @products.each do |product|
-    = product.name
-    = product.price
-    = image_tag(product.product_photos.first)
+    %div.product-list-item
+      = image_tag(product.product_photos.first, class: "first-image")
+      = image_tag(product.product_photos.second, class: "hidden-product-image")
+      %h2
+        = product.name
+      %p
+        = number_to_currency(product.price, precision: 0)
