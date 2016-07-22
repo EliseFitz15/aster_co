@@ -32,4 +32,9 @@ $(document).ready(function(){
   $('.collection-image').hover(function() {
     $( this ).find('.collection-description').toggle();
   });
+
+  $('.product-list-item').hover(function() {
+    $(this).find('.hidden-product-image').toggle();
+    $(this).find('.first-image').toggle();
+  });
 });

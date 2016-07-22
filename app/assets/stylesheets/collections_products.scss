@@ -1,0 +1,45 @@
+.collection-title {
+  font-family: $font-family-serif-standard;
+  text-align: center;
+}
+
+.collection-title h1 {
+  font-size: 3em;
+  margin-top: 0;
+}
+
+.hidden-product-image {
+  display: none;
+}
+
+.product-list-item {
+  width: 28%;
+  display: inline-block;
+  padding: 2.5%;
+
+  p, h2 {
+    text-align: center;
+  }
+}
+
+.product-list-item img {
+  width: 100%;
+  border: 2px solid black;
+}
+
+@include breakpoint(medium only) {
+  .product-list-item {
+    width: 42%;
+    padding: 3%;
+  }
+}
+
+@include breakpoint(small only) {
+  .product-list-item {
+    width: 94%;
+  }
+  .collection-title h1 {
+    font-size: 2em;
+    margin-top: 0;
+  }
+}
