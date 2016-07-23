@@ -20,11 +20,36 @@
   p, h2 {
     text-align: center;
   }
+  p {
+    font-size: 18px;
+    font-weight: bold;
+  }
 }
 
 .product-list-item img {
   width: 100%;
   border: 2px solid black;
+}
+
+.product-list-item h2 a {
+	position: relative;
+  text-decoration: none;
+  color: black;
+	&:after {
+		content: '';
+		height: 2px;
+		bottom: -1px;
+		position: absolute;
+		left: 50%;
+		width: 0;
+		transition: 0.3s all ease-in-out;
+		background: $gold;
+		}
+		&:hover:after {
+		width: 100%;
+		left: 0;
+		background: $gold;
+	}
 }
 
 @include breakpoint(medium only) {

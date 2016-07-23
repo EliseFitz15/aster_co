@@ -12,6 +12,6 @@
       = image_tag(product.product_photos.first, class: "first-image")
       = image_tag(product.product_photos.second, class: "hidden-product-image")
       %h2
-        = product.name
+        = link_to product.name, product_path(product)
       %p
         = number_to_currency(product.price, precision: 0)
