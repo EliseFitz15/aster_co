@@ -52,18 +52,9 @@
   margin-right: auto;
 }
 
-.dashboard h1 {
-  margin: 20px;
+.events-list h1 {
+  font-family: $font-family-sans-bold;
   text-align: center;
-}
-
-.dashboard li {
-  line-height: 1.5;
-  font-size: 20px;
-}
-
-.dashboard ul {
-  margin-bottom: 30px;
 }
 
 @include breakpoint(medium down) {

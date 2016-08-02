@@ -2,11 +2,6 @@ class HomesController < ApplicationController
   def about
   end
 
-  def events
-    @upcoming_events = Event.where("start_date > ?", Date.yesterday)
-    @past_events = Event.where("start_date <= ?", Date.yesterday)
-  end
-
   def login
   end
 
@@ -19,8 +14,8 @@ class HomesController < ApplicationController
     #   end
     # end
   end
-
-  def placeholdevents
+  
+  def dashboard
   end
 
   def placeholdcollection

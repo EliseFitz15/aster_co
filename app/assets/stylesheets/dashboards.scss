@@ -1,0 +1,23 @@
+.events-dashboard {
+  position: relative;
+}
+
+.events-dashboard h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.events-dashboard li {
+  line-height: 2;
+  font-size: 20px;
+}
+
+.events-dashboard ul {
+  margin-bottom: 30px;
+  list-style: none;
+}
+
+.events-dashboard .button {
+  position: absolute;
+  right: 10%;
+}

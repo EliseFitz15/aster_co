@@ -18,5 +18,8 @@
           %p.address
             = "#{event.address}"
 
+      - if @events.empty?
+        %h1.check-back Check back soon for more events!
+
 .events-image
   = image_tag('product/candle-rows.jpg')
