@@ -1,7 +1,12 @@
-.row.dashboard
-  %h1 Click to Edit Details
-
+.row.events-dashboard
+  %h1 Manage Events
+  %p
+    = link_to "Add New Event", new_event_path, class: "button"
+  %p Click the Event title to edit the details.
   %ul
     - @events.each do |event|
       %li
         = link_to event.title, edit_event_path(event)
+
+  %div.back
+    = link_to "Back to Dashboard", "/dashboard"

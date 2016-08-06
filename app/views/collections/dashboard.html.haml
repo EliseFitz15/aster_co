@@ -1,0 +1,17 @@
+.row.products-dashboard
+  %h1 Manage Collections
+  %p.new-product-button-wrapper
+    = link_to "Add New Collection", new_collection_path, class: "button"
+  %p Click the Collection title to edit the details.
+  %table{:border => 1}
+    %tbody
+      %tr
+        %td Edit Collection
+        %td Delete
+      - @collections.each do |collection|
+        %tr
+          %td= link_to collection.title, edit_collection_path(collection)
+          %td= link_to "Delete", collection_path(collection), method: :delete, class: :button
+
+  %div.back
+    = link_to "Back to Dashboard", "/dashboard"

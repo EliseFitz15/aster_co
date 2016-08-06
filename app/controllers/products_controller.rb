@@ -1,10 +1,6 @@
 class ProductsController < ApplicationController
   http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD']
 
-  def index
-    @products = Product.where(hidden: false)
-  end
-
   def show
     @product = Product.find(params[:id])
   end
@@ -42,7 +38,11 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to products_path
+    redirect_to '/products_dashboard'
+  end
+
+  def dashboard
+    @collections = Collection.all
   end
 
   private
