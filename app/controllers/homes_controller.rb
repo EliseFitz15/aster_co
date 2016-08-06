@@ -1,4 +1,6 @@
 class HomesController < ApplicationController
+  http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD'], only: [:dashboard]
+
   def about
   end
 
@@ -6,15 +8,8 @@ class HomesController < ApplicationController
   end
 
   def welcome
-    # @photos = []
-    # @data = HTTParty.get('https://api.instagram.com/v1/users/' + ENV['IG_USER'] +   '/media/recent/?access_token=' + ENV['ACCESS_TOKEN'] + '')
-    # unless @data["data"].nil?
-    #   3.times do |i|
-    #     @photos << @data["data"][i]["images"]["low_resolution"]["url"]
-    #   end
-    # end
   end
-  
+
   def dashboard
   end
 

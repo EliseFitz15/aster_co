@@ -1,8 +1,8 @@
-.events-dashboard {
+.events-dashboard, .products-dashboard {
   position: relative;
 }
 
-.events-dashboard h1 {
+.events-dashboard h1, .products-dashboard h1 {
   margin-bottom: 20px;
   text-align: center;
 }
@@ -20,4 +20,22 @@
 .events-dashboard .button {
   position: absolute;
   right: 10%;
+}
+
+.products-dashboard .new-product-button-wrapper {
+  position: absolute;
+  right: 10%;
+}
+
+td {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 3;
+  padding: 0 10px;
+}
+
+.back {
+  position: absolute;
+  right: 10%;
+  padding: 20px 0;
 }

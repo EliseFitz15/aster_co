@@ -1,0 +1,23 @@
+.row.products-dashboard
+  %h1 Manage Products
+  %p.new-product-button-wrapper
+    = link_to "Add New Product", new_product_path, class: "button"
+  %p Click the Product title to edit the details.
+  %ul
+    - @collections.each do |collection|
+      %h2.collection-product-group
+        = link_to collection.title, edit_collection_path(collection)
+      %table{:border => 1}
+        %tbody
+          %tr
+            %td Edit Product
+            %td Hide or Show
+            %td Delete
+          - collection.products.each do |product|
+            %tr
+              %td= link_to product.name, edit_product_path(product)
+              %td= link_to product.hidden ? "Show" : "Hide", hide_product_path(product, page: params[:page]), method: :patch, class: :button
+              %td= link_to "Delete", product_path(product), method: :delete, class: :button
+
+  %div.back
+    = link_to "Back to Dashboard", "/dashboard"

@@ -7,7 +7,7 @@ class CollectionsController < ApplicationController
 
   def show
     @collection = Collection.find(params[:id])
-    @products = @collection.products
+    @products = @collection.products.where(hidden: false)
   end
 
   def new
@@ -44,7 +44,11 @@ class CollectionsController < ApplicationController
   def destroy
     @collection = Collection.find(params[:id])
     @collection.destroy
-    redirect_to root_path
+    redirect_to collections_path
+  end
+
+  def dashboard
+    @collections = Collection.all
   end
 
   protected
