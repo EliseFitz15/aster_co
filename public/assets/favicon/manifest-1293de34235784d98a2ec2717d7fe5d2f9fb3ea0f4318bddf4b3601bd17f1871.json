@@ -1,0 +1,41 @@
+{
+	"name": "Aster",
+	"icons": [
+		{
+			"src": "/assets/favicon/android-chrome-36x36-87fd9d33cf4175684414b17cfd46effe0547ca2def54ba93f22d4f0d6d4b2de3.png",
+			"sizes": "36x36",
+			"type": "image\/png",
+			"density": 0.75
+		},
+		{
+			"src": "/assets/favicon/android-chrome-48x48-77f82b665988ce770a65f461c074ff50671be746e5d89a82312288541d3933a3.png",
+			"sizes": "48x48",
+			"type": "image\/png",
+			"density": 1
+		},
+		{
+			"src": "/assets/favicon/android-chrome-72x72-6a03d65aa620e766bb3f62fad1f89f09b48f56489cf9e00c7dbaef63fdc6258b.png",
+			"sizes": "72x72",
+			"type": "image\/png",
+			"density": 1.5
+		},
+		{
+			"src": "/assets/favicon/android-chrome-96x96-5468fb6162a4fd24f6586dbd06288ecef37dd15a37f526d966893a22b0eb44bc.png",
+			"sizes": "96x96",
+			"type": "image\/png",
+			"density": 2
+		},
+		{
+			"src": "/assets/favicon/android-chrome-144x144-50cbf080a9335f319bf31267f3d723197c915d9d314eb45cc3ba21176631e186.png",
+			"sizes": "144x144",
+			"type": "image\/png",
+			"density": 3
+		},
+		{
+			"src": "/assets/favicon/android-chrome-192x192-6e40d3e068b6f363656fd8cd7befaf875b6aedd1c2cf70a55ea9d0f4f9da2c43.png",
+			"sizes": "192x192",
+			"type": "image\/png",
+			"density": 4
+		}
+	]
+}
