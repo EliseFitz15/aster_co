@@ -1,141 +1,127 @@
 .collection-details {
-  position: relative;
+  display: flex;
+  flex-direction: row;
   margin-bottom: 10%;
+}
+
+.collection-details:nth-child(3n+2) {
+  flex-direction: row-reverse;
+}
+
+.collection-details:nth-child(3n+2) .collection-tile-wrapper {
+  background: $gold;
+}
+
+.collection-details:nth-child(3n+3) .collection-tile-wrapper {
+  background-color: white;
+}
+
+.collection-image {
+  position: relative;
+  width: 50%;
+  border: 2px solid black;
 }
 
 .collection-image img {
   width: 100%;
+  height: 100%;
 }
 
-.collection-image {
+.collection-tile-wrapper {
+  width: 50%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-details:nth-child(3n+3) .collection-tile-wrapper {
   border: 2px solid black;
-  display: inline-block;
-  width: calc(50% - 4px);
+  border-left: none;
+}
+
+.collection-details:nth-child(3n+2) .collection-tile-wrapper .collection-tile {
+  border: 1px solid black;
+}
+
+.collection-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+  border: 1px solid $gold;
+  align-items: center;
 }
 
 .collection-description {
   display: none;
   position: absolute;
-  top: 2px;
-  width: calc(50% - 4px);
-  height: calc(50% - 4px);
-  background-color: rgba(255,255,255,0.7);
-  overflow: scroll;
-}
-
-.collection-description p {
-  font-size: 24px;
-  margin: 20px;
-}
-
-.collection-tile {
-  border: 2px solid $gold;
-  display: inline-block;
-  width: 50%;
-  float: right;
-  background-color: $gold;
-  width: calc(50% - 4px);
-}
-
-.title {
-  position: relative;
-  margin: 5%;
-  height: 90%;
-  border: 1px solid black;
-}
-
-.collection-tile .title h1 a {
-  color: black;
-  display: block;
-  font-family: $font-family-serif-standard;
-  font-size: 112%;
-  position: absolute;
+  top: 20%;
+  padding: 25% 5%;
+  margin: auto;
+  width: 75%;
+  font-size: 40px;
+  left: 0;
+  right: 0;
   text-align: center;
-  text-decoration: none;
-  top: 30%;
-  width: 100%;
+  background-color: rgba(255,255,255,0.7);
 }
 
-.collection-tile .title .button {
-  text-decoration: none;
-  background: black;
-  color: $gold;
-  padding: 10px 25px;
-  position: absolute;
-  top: 55%;
-  left: calc(50% - 65px);
+.collection-tile .title {
+  font-family: $font-family-serif-standard;
+  text-align: center;
+  margin-bottom: 35px;
+  padding: 0 10px;
 }
 
-.collection-details:nth-child(1) .collection-tile {
-  background-color: black;
-  border: 2px solid black;
-}
-
-.collection-details:nth-child(1) .title {
-  border: 1px solid $gold;
-}
-
-.collection-details:nth-child(1) .collection-tile .title h1 a {
-  color: $gold;
-}
-
-.collection-details:nth-child(1) .collection-tile .title .button {
+.collection-tile .title a {
   color: black;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.collection-details:nth-child(3n+1) .collection-tile-wrapper
+.collection-tile .title a {
+  color: $gold;
+}
+
+.collection-details:nth-child(3n+1) .collection-tile-wrapper
+.collection-tile .explore-button .button {
   background-color: $gold;
 }
 
-.collection-details:nth-child(3) .collection-tile {
-  background-color: white;
-  border: 2px solid black;
-  border-left: 0px;
+.collection-details:nth-child(3n+2) .collection-tile-wrapper
+.collection-tile .explore-button .button {
+  color: $gold;
 }
 
-.collection-details:nth-child(3) .title {
-  border: 1px solid $gold;
-}
-
-.collection-details:nth-child(3) .collection-tile .title .button {
+.collection-details:nth-child(3n+3) .collection-tile-wrapper
+.collection-tile .explore-button .button {
   color: white;
 }
 
-.collection-details:nth-child(2) .collection-tile {
-    float: left;
-}
-
-.collection-details:nth-child(2) .collection-image {
-    float: right;
-}
-
-@include breakpoint(medium only) {
-  .collection-tile .title h1 a {
-    font-size: 95%;
-  }
-
-  .collection-tile .title .button {
-    left: calc(50% - 52px);
-    padding: 5px 15px;
-    top: 60%;
-  }
-
-  .collection-description {
-    overflow: scroll;
-  }
+.explore-button .button {
+  background-color: black;
 }
 
 @include breakpoint(small only) {
-  .collection-tile .title .button {
+  .collection-tile .explore-button {
     display: none;
   }
 
-  .collection-tile .title h1 a {
-    font-size: 50%;
+  .collection-tile .title  {
+    margin-bottom: 0px;
+  }
+  .collection-tile .title a {
+    font-size: 100%;
   }
 
   .collection-description {
     overflow: scroll;
   }
 
-  .collection-description p {
+  .collection-description  {
     font-size: 12px;
   }
 }
