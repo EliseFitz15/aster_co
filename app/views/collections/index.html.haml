@@ -1,13 +1,13 @@
 .collections-list
   - @collections.each do |collection|
-    .collection-details.clearfix{"data-equalizer" => "", "data-equalizer-on" => "small-up"}
-      .collection-image{"data-equalizer-watch" => ""}
+    .collection-details
+      .collection-image
         = image_tag collection.collection_photo
-        .collection-description{"data-equalizer-watch" => ""}
-          %p
-            = collection.description
-      .collection-tile{"data-equalizer-watch" => ""}
-        .title
-          %h1
+        .collection-description
+          = collection.description
+      .collection-tile-wrapper
+        .collection-tile
+          .title
             = link_to collection.title, collection_path(collection)
-          = link_to "EXPLORE", collection_path(collection), class: :button
+          .explore-button
+            = link_to "EXPLORE", collection_path(collection), class: :button
