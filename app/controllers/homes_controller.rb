@@ -15,4 +15,7 @@ class HomesController < ApplicationController
 
   def placeholdcollection
   end
+
+  def stockists
+  end
 end
