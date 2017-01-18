@@ -8,6 +8,13 @@ class CollectionsController < ApplicationController
   def show
     @collection = Collection.find(params[:id])
     @products = @collection.products.where(hidden: false)
+    zodiac_order = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
+    if @collection.title = "The Zodiac Collection"
+      hash = @products.each_with_object({}) do |product, hash|
+        hash[product.name] = product
+      end
+      @products = zodiac_order.map { |i| hash[i] }
+    end
   end
 
   def new
